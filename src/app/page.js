@@ -1,10 +1,18 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import A from "@/A/A";
+import B from "@/B/B";
+import C from "@/C/C";
+import D from "@/D/D";
 
-export default function Home() {
+export default function App() {
   return (
-    <div className={styles.page}>
-      <h1>hellllooo</h1>
+    <div>
+      <A />
+      <B />
+      <C />
+      <D />
+
     </div>
   );
 }
