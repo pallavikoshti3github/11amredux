@@ -1,12 +1,17 @@
 "use client"
 import React, { useState } from 'react'
 import './B.css'
+import { useDispatch } from 'react-redux'
+useDispatch
 
 const B = () => {
     const [loc,setLoc] = useState("");
-
+    const dispatch = useDispatch();
     const handleClick =() =>{
-        alert(loc);
+      dispatch({
+        type:"LOC_UPDATE",
+        loc:loc
+      });
     }
 
   return (

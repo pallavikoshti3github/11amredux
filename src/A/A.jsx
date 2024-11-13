@@ -1,19 +1,21 @@
 "use client"
 import React, { useState } from 'react'
 import './A.css'
+import { useDispatch } from 'react-redux'
+
 
 const A = () => {
 
     const [name,setName] = useState("");
-
+    const dispatch = useDispatch()
     const handleChange = (eve) =>{
         const name = eve.target.value;
         setName(name);
     }
 
     const handleClick = (eve)=>{
-        alert(name)
-    }
+        dispatch({type:"NAME_UPDATE",name})
+    }   
 
 
   return (
